@@ -1,0 +1,20 @@
+{
+    "Group": "HytaleModding",
+    "Name": "ExamplePlugin",
+    "Version": "0.0.1",
+    "Description": "",
+    "Authors": [
+        {
+            "Name": "Playyy",
+            "Email": "pedrohperescode@gmail.com",
+            "Url": ""
+        }
+    ],
+    "Website": "",
+    "DisabledByDefault": false,
+    "IncludesAssetPack": false,
+    "Dependencies": {},
+    "OptionalDependencies": {},
+    "ServerVersion": "*",
+    "Main": "dev.hytalemodding.ExamplePlugin"
+}
