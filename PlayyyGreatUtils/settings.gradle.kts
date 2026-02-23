@@ -1,4 +1,4 @@
-rootProject.name = "dev.hytalemodding"
+rootProject.name = "dev.playyy"
 
 plugins {
     // See documentation on https://scaffoldit.dev
@@ -14,15 +14,17 @@ hytale {
 
     repositories {
         // Any external repositories besides: MavenLocal, MavenCentral, HytaleMaven, and CurseMaven
+        mavenCentral()
     }
 
     dependencies {
         // Any external dependency you also want to include
+        compileOnly("net.luckperms:api:5.5")
     }
 
     manifest {
-        Group = "HytaleModding"
-        Name = "ExamplePlugin"
-        Main = "dev.hytalemodding.ExamplePlugin"
+        Group = "Playyy"
+        Name = "Great Utils"
+        Main = "dev.playyy.GreatUtils"
     }
 }

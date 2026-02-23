@@ -1,6 +1,6 @@
 {
-    "Group": "HytaleModding",
-    "Name": "ExamplePlugin",
+    "Group": "Playyy",
+    "Name": "Great Utils",
     "Version": "0.0.1",
     "Description": "",
     "Authors": [
@@ -13,8 +13,10 @@
     "Website": "",
     "DisabledByDefault": false,
     "IncludesAssetPack": false,
-    "Dependencies": {},
+    "Dependencies": {
+        "LuckPerms:LuckPerms": "*"
+    },
     "OptionalDependencies": {},
     "ServerVersion": "*",
-    "Main": "dev.hytalemodding.ExamplePlugin"
+    "Main": "dev.playyy.GreatUtils"
 }
