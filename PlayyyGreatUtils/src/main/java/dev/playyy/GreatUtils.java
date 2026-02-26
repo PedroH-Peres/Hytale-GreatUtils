@@ -8,6 +8,7 @@ import dev.playyy.commands.RankAdminCommand;
 import dev.playyy.commands.RankListCommand;
 import dev.playyy.commands.RankupCommand;
 import dev.playyy.config.ConfigManager;
+import dev.playyy.config.PlayerDataManager;
 import dev.playyy.config.RankConfig;
 import net.luckperms.api.LuckPerms;
 import net.luckperms.api.LuckPermsProvider;
@@ -20,6 +21,7 @@ public class GreatUtils extends JavaPlugin {
 
     protected LuckPerms luckPerms;
     private ConfigManager rankConfigManager;
+    private PlayerDataManager playerDataManager;
 
     public GreatUtils(@Nonnull JavaPluginInit init) {
         super(init);
@@ -32,6 +34,9 @@ public class GreatUtils extends JavaPlugin {
 
         rankConfigManager = new ConfigManager(pluginFolder);
         rankConfigManager.loadConfig();
+        playerDataManager = new PlayerDataManager(pluginFolder);
+        playerDataManager.load();
+
 
         RankConfig ranksAtuais = rankConfigManager.getConfig();
         this.getCommandRegistry().registerCommand(new RankAdminCommand(rankConfigManager));
