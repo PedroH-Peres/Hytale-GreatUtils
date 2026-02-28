@@ -50,8 +50,13 @@ public class PlayerDataManager {
         }
     }
 
+    public boolean hasPlayer(String uuid) {
+        return playerRanks.containsKey(uuid);
+    }
+
+
     public String getPlayerRank(String uuid) {
-        return playerRanks.getOrDefault(uuid, "explorador");
+        return playerRanks.getOrDefault(uuid, "default");
     }
 
     public void setPlayerRank(String uuid, String rankId) {

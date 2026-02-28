@@ -37,22 +37,20 @@ public class RankListCommand extends CommandBase {
         for (Rank rank : ranks.values()) {
 
             StringBuilder info = new StringBuilder();
-            info.append("§7- §b").append(rank.getName())
-                    .append(" §8(").append(rank.getId()).append(") ")
-                    .append("§f| Custo: §e").append(rank.getCoinCost()).append(" coins");
+            info.append("- ").append(rank.getName())
+                    .append(" | Custo: ").append(rank.getCoinCost()).append(" coins");
 
             if (rank.requiresItems()) {
-                info.append(" §f+ §6Itens");
+                info.append(" + Itens");
             }
 
-
             if (rank.isMaxRank()) {
-                info.append(" §c[MÁXIMO]");
+                info.append(" [MÁXIMO]");
             }
 
             sender.sendMessage(Message.raw(info.toString()));
         }
 
-        sender.sendMessage(Message.raw("§e-----------------------------------"));
+        sender.sendMessage(Message.raw("-----------------------------------"));
     }
 }

@@ -8,23 +8,22 @@ import java.util.Map;
 public class RankConfig {
 
     private Map<String, Rank> ranks;
-
-    // Inicializa o mapa para evitar null pointers
+    private String defaultRank;
     public RankConfig() {
         this.ranks = new HashMap<>();
     }
 
-    // Getter
+    public String getDefaultRank() { return defaultRank; }
+    public void setDefaultRank(String defaultRank) { this.defaultRank = defaultRank; }
+
     public Map<String, Rank> getRanks() {
         return ranks;
     }
 
-    // Setter necessário para injetar os dados no createDefaultConfig()
     public void setRanks(Map<String, Rank> ranks) {
         this.ranks = ranks;
     }
 
-    // Método utilitário para buscar um rank rápido pelo ID
     public Rank getRankById(String rankId) {
         if (ranks != null && rankId != null) {
             return ranks.get(rankId.toLowerCase());

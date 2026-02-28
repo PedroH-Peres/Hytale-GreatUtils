@@ -46,7 +46,8 @@ public class GreatUtils extends JavaPlugin {
 
     @Override
     protected void start(){
+
         this.luckPerms = LuckPermsProvider.get();
-        this.getCommandRegistry().registerCommand(new RankupCommand(luckPerms));
+        this.getCommandRegistry().registerCommand(new RankupCommand(luckPerms, playerDataManager, rankConfigManager));
     }
 }
